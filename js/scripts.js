@@ -30,12 +30,14 @@ function exponent(number1,number2)
 
 function getValue(idName)
 {
-	return (parseInt($(idName).val()));
+	//Change from int to float
+	//return (parseInt($(idName).val()));
+	return (parseFloat($(idName).val()));
 }
 
 function setValue(idName,returnValue)
 {
-	$(idName).val(returnValue);
+	$(idName).val(returnValue.toFixed(2).toString());
 }
 
 function clearValue(idName)
@@ -49,7 +51,7 @@ $(function()
   {
 		var number1 = getValue("#number1");
 		var number2 = getValue("#number2");
-		var returnValue = add(number1,number2).toString();
+		var returnValue = add(number1,number2);
 		setValue("#returnValue",returnValue);
   });
 
@@ -57,7 +59,7 @@ $(function()
   {
 		var number1 = getValue("#number1");
 		var number2 = getValue("#number2");
-		var returnValue = subtract(number1,number2).toString();
+		var returnValue = subtract(number1,number2);
 		setValue("#returnValue",returnValue);
   });
 
@@ -65,7 +67,7 @@ $(function()
   {
 		var number1 = getValue("#number1");
 		var number2 = getValue("#number2");
-		var returnValue = multiply(number1,number2).toString();
+		var returnValue = multiply(number1,number2);
 		setValue("#returnValue",returnValue);
   });
 
@@ -73,7 +75,7 @@ $(function()
   {
 		var number1 = getValue("#number1");
 		var number2 = getValue("#number2");
-		var returnValue = divide(number1,number2).toString();
+		var returnValue = divide(number1,number2);
 		setValue("#returnValue",returnValue);
   });
 
@@ -81,7 +83,7 @@ $(function()
   {
 		var number1 = getValue("#number1");
 		var number2 = getValue("#number2");
-		var returnValue = modulo(number1,number2).toString();
+		var returnValue = modulo(number1,number2);
 		setValue("#returnValue",returnValue);
   });
 
@@ -89,7 +91,7 @@ $(function()
   {
 		var number1 = getValue("#number1");
 		var number2 = getValue("#number2");
-		var returnValue = exponent(number1,number2).toString();
+		var returnValue = exponent(number1,number2);
 		setValue("#returnValue",returnValue);
   });
 
