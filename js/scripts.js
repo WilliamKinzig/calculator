@@ -23,6 +23,11 @@ function modulo(number1,number2)
 	return (number1%number2);
 }
 
+function exponent(number1,number2)
+{
+	return (Math.pow(number1,number2));
+}
+
 function getValue(idName)
 {
 	return (parseInt($(idName).val()));
@@ -77,6 +82,14 @@ $(function()
 		var number1 = getValue("#number1");
 		var number2 = getValue("#number2");
 		var returnValue = modulo(number1,number2).toString();
+		setValue("#returnValue",returnValue);
+  });
+
+	$("#btn-exponent").click(function()
+  {
+		var number1 = getValue("#number1");
+		var number2 = getValue("#number2");
+		var returnValue = exponent(number1,number2).toString();
 		setValue("#returnValue",returnValue);
   });
 
