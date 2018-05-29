@@ -2,38 +2,12 @@ body {
   font-size: 1.5em;
   color: black;
   background-color: lightcyan;
+  margin: 6px;
+  padding: 6px;
 }
 
 h1 {
   text-align: center;
-}
-
-img {
-   height: 14em;
-   width: 15em;
-   vertical-align: middle;
-   display: block;
-   margin-left: auto;
-   margin-right: auto;
-}
-
-.intro {
-  color: red;
-  font-size: 1em;
-}
-
-.clickable {
-  cursor: pointer;
-  color: #0088cc;
-}
-
-.show-border {
-  border-style: solid;
-  border-color: black;
-  border-width: 6px;
-  padding: 6px;
-  margin: 6px;
-  background-color: lightblue;
 }
 
 .btn-dark {
@@ -41,6 +15,16 @@ img {
   color: white;
 }
 
-#btn-add {
-  
+.default-background {
+  background-color: lightgrey;
+  color: black;
+  margin: 4px;
+  padding: 4px;
+}
+
+.default-background button{
+  background-color: azure;
+  color: black;
+  margin: 6px;
+  padding: 6px;
 }
