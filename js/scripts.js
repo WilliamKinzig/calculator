@@ -28,6 +28,12 @@ function exponent(number1,number2)
 	return (Math.pow(number1,number2));
 }
 
+function nRoot(number1,number2)
+{
+	//Square Root would have number2 = 2
+	return (Math.pow(number1,(1/number2)));
+}
+
 function getValue(idName)
 {
 	//Change from int to float
@@ -92,6 +98,14 @@ $(function()
 		var number1 = getValue("#number1");
 		var number2 = getValue("#number2");
 		var returnValue = exponent(number1,number2);
+		setValue("#returnValue",returnValue);
+  });
+
+	$("#btn-nth-root").click(function()
+  {
+		var number1 = getValue("#number1");
+		var number2 = getValue("#number2");
+		var returnValue = nRoot(number1,number2);
 		setValue("#returnValue",returnValue);
   });
 
