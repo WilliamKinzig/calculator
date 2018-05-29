@@ -1,22 +1,22 @@
-function add(number1,number2)
-{
-	return (number1+number2);
-}
-
-function subtract(number1,number2)
-{
-	return (number1-number2);
-}
-
-function multiply(number1,number2)
-{
-	return (number1*number2);
-}
-
-function divide(number1,number2)
-{
-	return (number1/number2);
-}
+// function add(number1,number2)
+// {
+// 	return (number1+number2);
+// }
+//
+// function subtract(number1,number2)
+// {
+// 	return (number1-number2);
+// }
+//
+// function multiply(number1,number2)
+// {
+// 	return (number1*number2);
+// }
+//
+// function divide(number1,number2)
+// {
+// 	return (number1/number2);
+// }
 
 // var number1 = parseInt(prompt("Enter a number:"));
 // var number2 = parseInt(prompt("Enter another number:"));
@@ -30,24 +30,12 @@ function divide(number1,number2)
 
 $(function()
 {
-  $("#btn-add").click(function()
+  $("button#btn-add").click(function()
   {
-    
+		// var test = 10;
+		// var number1 = parseInt($("#number1"));
+		// var string1 = test.toString();
+		$("#testVal").val("this is a test.");
   });
-
-  // $("p#paragraph1").click(function()
-  // {
-  //   var currentParagraph = $("#paragraph1");
-  //   var currentClass = "show-border";
-  //   if(currentParagraph.hasClass(currentClass))
-  //   {
-  //     currentParagraph.removeClass(currentClass);
-  //   }
-  //   else
-  //   {
-  //     currentParagraph.removeClass();
-  //     currentParagraph.addClass(currentClass);
-  //   }
-  // });
 
 });
