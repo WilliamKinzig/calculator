@@ -18,25 +18,73 @@ function divide(number1,number2)
 	return (number1/number2);
 }
 
-// var number1 = parseInt(prompt("Enter a number:"));
-// var number2 = parseInt(prompt("Enter another number:"));
-// var resultAdd = add(number1, number2);
-// var resultSubtract = subtract(number1,number2);
-// var resultMultiply = multiply(number1,number2);
-// var resultDivide = divide(number1,number2);
-// alert("Add: "+resultAdd+" Subtract: " +resultSubtract+
-// " Multiply: "+resultMultiply+" Divide: "+resultDivide);
+function modulo(number1,number2)
+{
+	return (number1%number2);
+}
 
+function getValue(idName)
+{
+	return (parseInt($(idName).val()));
+}
+
+function setValue(idName,returnValue)
+{
+	$(idName).val(returnValue);
+}
+
+function clearValue(idName)
+{
+	$(idName).val("");
+}
 
 $(function()
 {
   $("#btn-add").click(function()
   {
+		var number1 = getValue("#number1");
+		var number2 = getValue("#number2");
+		var returnValue = add(number1,number2).toString();
+		setValue("#returnValue",returnValue);
+  });
 
-		var number1 = parseInt($("#number1").val());
-		var number2 = parseInt($("#number2").val());
-		var returnValue = add(number1,number2);
-		$("#returnValue").val(returnValue);
+	$("#btn-subtract").click(function()
+  {
+		var number1 = getValue("#number1");
+		var number2 = getValue("#number2");
+		var returnValue = subtract(number1,number2).toString();
+		setValue("#returnValue",returnValue);
+  });
+
+	$("#btn-multiply").click(function()
+  {
+		var number1 = getValue("#number1");
+		var number2 = getValue("#number2");
+		var returnValue = multiply(number1,number2).toString();
+		setValue("#returnValue",returnValue);
+  });
+
+	$("#btn-divide").click(function()
+  {
+		var number1 = getValue("#number1");
+		var number2 = getValue("#number2");
+		var returnValue = divide(number1,number2).toString();
+		setValue("#returnValue",returnValue);
+  });
+
+	$("#btn-modulo").click(function()
+  {
+		var number1 = getValue("#number1");
+		var number2 = getValue("#number2");
+		var returnValue = modulo(number1,number2).toString();
+		setValue("#returnValue",returnValue);
+  });
+
+	$("#btn-clear").click(function()
+  {
+		clearValue("#number1");
+		clearValue("#number2");
+		clearValue("#returnValue");
   });
 
 });
